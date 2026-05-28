@@ -1,0 +1,49 @@
+namespace FluentData.Providers.Common.Builders
+{
+    /// <summary>
+    /// Generates SQL UPDATE statements from builder data.
+    /// Constructs SET and WHERE clauses using column definitions and parameter prefixes.
+    /// </summary>
+    internal class UpdateBuilderSqlGenerator
+    {
+        /// <summary>
+        /// Generates an UPDATE SQL statement from the provided builder data.
+        /// </summary>
+        /// <param name="provider">The database provider for column name escaping.</param>
+        /// <param name="parameterPrefix">The parameter prefix character (e.g., "@" for SQL Server).</param>
+        /// <param name="data">The builder data containing columns, WHERE columns, and table name.</param>
+        /// <returns>A formatted UPDATE SQL statement.</returns>
+        public string GenerateSql(IDbProvider provider, string parameterPrefix, BuilderData data)
+        {
+            var setSql = "";
+            foreach (var column in data.Columns)
+            {
+                if (setSql.Length > 0)
+                    setSql += ", ";
+
+                setSql += string.Format("{0} = {1}{2}",
+                                    provider.EscapeColumnName(column.ColumnName),
+                                    parameterPrefix,
+                                    column.ParameterName);
+            }
+
+            var whereSql = "";
+            foreach (var column in data.Where)
+            {
+                if (whereSql.Length > 0)
+                    whereSql += " and ";
+
+                whereSql += string.Format("{0} = {1}{2}",
+                                    provider.EscapeColumnName(column.ColumnName),
+                                    parameterPrefix,
+                                    column.ParameterName);
+            }
+
+            var sql = string.Format("update {0} set {1} where {2}",
+                                        data.ObjectName,
+                                        setSql,
+                                        whereSql);
+            return sql;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net8.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Title>FluentData.Core</Title>
+    <Authors>Lars-Erik Kindblad</Authors>
+    <Version>8.0.5.0</Version>
+    <FileVersion>8.0.5.0</FileVersion>
+    <AssemblyName>FluentData.Core</AssemblyName>
+    <AssemblyTitle>FluentData.Core</AssemblyTitle>
+    <PackageId>FluentData.Core</PackageId>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageReadmeFile>docs/README.md</PackageReadmeFile>
+    <PackageReleaseNotes>Update version</PackageReleaseNotes>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/healthguo/FluentData.Core</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/healthguo/FluentData.Core</RepositoryUrl>
+    <Copyright>Copyright © 2026 - The Fluent Data Project</Copyright>
+    <Description>FluentData.Core is a Micro ORM that makes it simple to select, insert, update and delete data in a database. It gives the developer the power of ADO.NET but with the convenience of an ORM. It has a simple to use fluent API that uses SQL - the best and most suitable language to query data, and SQL or fluent builders to insert, update and delete data.</Description>
+    <PackageTags>ORM Micro Data;Database ADO.NET Fluent API Interfaces;SQL Server;MySQL;Oracle;Dameng;Azure;PostgreSQL;SQLite;Access;IBM DB2</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="logo.png" Pack="true" PackagePath="\" />
+    <None Include="..\README.md" Pack="true" PackagePath="\docs" />
+  </ItemGroup>
+</Project>
