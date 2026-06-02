@@ -6,8 +6,8 @@
     <Nullable>enable</Nullable>
     <Title>FluentData.Core</Title>
     <Authors>Lars-Erik Kindblad</Authors>
-    <Version>8.0.5.0</Version>
-    <FileVersion>8.0.5.0</FileVersion>
+    <Version>8.0.6.0</Version>
+    <FileVersion>8.0.6.0</FileVersion>
     <AssemblyName>FluentData.Core</AssemblyName>
     <AssemblyTitle>FluentData.Core</AssemblyTitle>
     <PackageId>FluentData.Core</PackageId>
@@ -16,6 +16,7 @@
     <PackageReleaseNotes>Update version</PackageReleaseNotes>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/healthguo/FluentData.Core</PackageProjectUrl>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/healthguo/FluentData.Core</RepositoryUrl>
     <Copyright>Copyright © 2026 - The Fluent Data Project</Copyright>

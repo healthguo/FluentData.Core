@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("FluentData")]
-[assembly: AssemblyCopyright("Copyright © 2025 - The Fluent Data Project")]
+[assembly: AssemblyCopyright("Copyright © 2026 - The Fluent Data Project")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
